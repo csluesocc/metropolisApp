@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style/style.css">
+<meta charset="utf-8">
+<title>Mapa</title>
+
+<script type="text/javascript">
+function ubicar(){
+navigator.geolocation.getCurrentPosition( mapa,error);
+}
+function mapa(posicion){
+var latitud= posicion.coords.latitude;
+var longitud= posicion.coords.longitude;
+var precision= posicion.coords.accuracy;
+alert("Su latitud es: "+latitud+" longitud: "+longitud+" precision: "+precision)
+}
+function error(errorC){
+if(errorC.code==0)
+alert("Error desconocido....");
+
+else if(errorC.code==1)
+alert("No se pudo encontrar la ubicacion");
+else if (errorC.code==2)
+alert("Posicion no Disponible...")
+else if (errorC.code==3)
+alert("se agoto la peticion de Ubicacion y coordenadas"+"parece que no estas conectado a la red")
+
+}
+
+
+
+</script>
+</head>
+
+<body onload="ubicar()">
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"> 
+	<title>Contactos</title> 
+	<link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />
+	<script src="jquery-1.7.1.min.js"></script>
+	<script src="jquery.mobile-1.3.1.min.js"></script>
+	<script src="ruta.js"></script>
+
+	<script type="text/javascript">
+	function mensage(){
+	
+	alert("debes estar conectado a interner para usar el mapa"+"\n"+"en caso de no estar conectado"+"\n" +"puedes hacer uso de las instrucciones manuales para llegar a los diferentes destinos...")
+}
+
+</script>
+</head> 
+<body> 
+
+	<!-- Start of first page: #home -->
+	<div data-role="page" id="menu">
+		<div data-role="header" data-position="fixed" id="header" data-theme="b">
+			<h3>Menú</h3>  
+		</div><!-- /header -->
+		<div data-role="content">
+			<br>
+			<br>
+	      <a href="#home" data-role="button" data-theme="a" data-transition="slideup" data-icon="home">Tarifas y Rutas</a>
+	        <a href="mapa.html" data-role="button" data-theme="a" data-transition="slideup" data-icon="star">¿Donde estoy?</a>
+	        
+	         <a href="occ.html" data-role="button" data-theme="a" data-transition="slideup" data-icon="refresh" onclick="mensage()" >Estaciones</a>
+	      <input type="button"  data-role="button" data-theme="a" data-icon="alert"  value="Salir..." onclick="window.close()" />
+	      <br>
+	      <br>
+	   <a href="https://twitter.com/csluesocc"><img src="images/twitter.png" alt=""</a>
+		</div><!-- /content -->
+		
+	</div>
+
+
+<!-- Start of first page: #home -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-position="fixed" id="header" data-theme="b">
+			<h3>Organizador</h3>  
+		</div><!-- /header -->
+		<div data-role="content">
+	      <a href="#" id="btnAddNote" data-role="button" class="big" data-theme="a" data-icon="plus">Agregar Nueva Ruta</a>
+			<a href="#" id="btnViewNotes" data-role="button" class="big" data-theme="a" data-icon="info">Ver Rutas</a>
+			<a href="#menu" data-role="button" data-theme="a" data-transition="slidedown" data-icon="back">regresar</a>
+		</div><!-- /content -->
+	</div><!-- /page home -->
+	<!-- Start of the second page : #add-notes -->
+	<div data-role="page" id="add-notes" data-add-back-btn="true">
+		<div data-role="header" id="header">
+			<h1>Agregar Ruta</h1>
+	  	</div>
+		<div data-role="content">
+			<input type="text" id="noteTitle" value="" placeholder="Ruta" autofocus/>
+			<input type="text" id="noteAuthor" value="" placeholder="costo"/>
+			<input type="text" id="noteTel" value="" placeholder="horario"/>
+			<textarea placeholder="Destino" name="noteDetails" id="noteDetails"></textarea>
+			
+	    		<a href="#" id="btnSaveNote" data-role="button"data-icon="check">Guardar Ruta</a>
+			<a href="#" id="btnClearNotes" data-role="button" data-icon="delete">Limpiar</a>
+	  	</div>
+	</div> <!-- /page add-notes -->
+	<!-- Start of the third page : #view-notes -->
+	<div data-role="page" id="view-notes" data-add-back-btn="true">
+		<div data-role="header" id="header">
+			<h1>Lista de Ruta</h1>
+			<a href="#"data-role="button" class="ui-btn-right" id="clearAllNotesBtn">
+		Limpiar</a>
+	</div>
+    
+
+
+		<div id="note-list" data-role="content">
+		</div>
+	</div> <!-- /page view-notes -->
+	<div data-role="page" id="pag2">
+		<div data-role="header" data-position="fixed" id="header" data-theme="a">
+			<h3>Mis Notas</h3>  
+		</div><!-- /header -->
+		<div data-role="content">
+	      <a href="#" id="" data-role="button" class="big" data-theme="b" data-icon="plus">Escribir nota</a>
+			<a href="#" id="" data-role="button" class="big" data-theme="b" data-icon="info">Rebisar Notas</a>
+			<a href="#home" data-role="button" data-theme="b" data-transition="slideup" data-icon="back">regresar</a>
+		</div><!-- /content -->
+	</div>
+</body>
+</html>

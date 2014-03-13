@@ -1,0 +1,24 @@
+{
+    "version":"1.0",
+	"name": "Metropolis",
+    "description": "Esta app usa Indexed DB API para guardar datos y geolocalizacion para mostrar mapas",
+    "launch_path": "/index.html",
+	"fullscreen": "false",
+    "icons": {
+
+        "128": "/images/notas.png"
+    },
+	"developer": {
+        "name": "Comunidad de Usuarios de Software y Hardware Libre - UESOcc",
+        "url": "https://www.facebook.com/groups/csluesfmocc"
+    },
+    "default_locale": "es",
+ 
+"permissions": {
+    "geolocation": {
+"description": "Marking out user location"
+}
+}
+
+}
+
